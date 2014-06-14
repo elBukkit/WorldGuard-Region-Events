@@ -9,7 +9,8 @@ import org.bukkit.event.Cancellable;
  * event that is triggered before a player enters a WorldGuard region, can be cancelled sometimes
  * @author mewin
  */
-public class RegionEnterEvent extends RegionEvent implements Cancellable {
+public class RegionEnterEvent extends RegionEvent implements Cancellable
+{
     private boolean cancelled, cancellable;
     /**
      * creates a new RegionEnterEvent
