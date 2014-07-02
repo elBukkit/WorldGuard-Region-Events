@@ -145,11 +145,6 @@ public class WGRegionEventsListener implements Listener {
         {
             playerRegions = new HashSet<ProtectedRegion>();
         }
-        
-        if (rm == null)
-        {
-            return false;
-        }
 
         for (final ProtectedRegion region : regions)
         {
