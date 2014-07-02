@@ -66,7 +66,7 @@ public class WGRegionEventsListener implements Listener {
 		long a = System.nanoTime();
 		Location from = e.getFrom();
 		Location to = e.getTo();
-		if (from.getBlockX() != to.getBlockX() || from.getBlockY() != to.getBlockY() || from.getBlockZ() != to	.getBlockZ()) {
+		if (from.getWorld() != to.getWorld() && from.getBlockX() != to.getBlockX() || from.getBlockY() != to.getBlockY() || from.getBlockZ() != to	.getBlockZ()) {
 			e.setCancelled(updateRegions(e.getPlayer(), MovementWay.MOVE, to, from));
 		}
 		long b = System.nanoTime();
