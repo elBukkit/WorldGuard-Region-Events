@@ -164,28 +164,11 @@ public class WGRegionEventsListener implements Listener {
                     
                     return true;
                 }
-                /*
                 else
                 {
-                    (new Thread()
-                    {
-                        @Override
-                        public void run()
-                        {
-                            try
-                            {
-                                sleep(50);
-                            }
-                            catch(InterruptedException ex)
-                            {}
-                            RegionEnteredEvent e = new RegionEnteredEvent(region, player, movement, from);
-                            
-                            plugin.getServer().getPluginManager().callEvent(e);
-                        }
-                    }).start();
-                    regions.add(region);
+                    RegionEnteredEvent enteredEvent = new RegionEnteredEvent(region, player, movement, from);
+                    plugin.getServer().getPluginManager().callEvent(enteredEvent);
                 }
-                */
             }
         }
         
@@ -211,28 +194,11 @@ public class WGRegionEventsListener implements Listener {
                     regions.addAll(oldRegions);
                     return true;
                 }
-                /*
                 else
                 {
-                    (new Thread()
-                    {
-                        @Override
-                        public void run()
-                        {
-                            try
-                            {
-                                sleep(50);
-                            }
-                            catch(InterruptedException ex)
-                            {}
-                            RegionLeftEvent e = new RegionLeftEvent(region, player, movement, from);
-                            
-                            plugin.getServer().getPluginManager().callEvent(e);
-                        }
-                    }).start();
-                    itr.remove();
+                    RegionLeftEvent leftEvent = new RegionLeftEvent(region, player, movement, from);
+                    plugin.getServer().getPluginManager().callEvent(leftEvent);
                 }
-                */
             }
         }
         put(player, regions);
