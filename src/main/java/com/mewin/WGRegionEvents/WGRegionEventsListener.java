@@ -158,6 +158,7 @@ public class WGRegionEventsListener implements Listener {
                     
                     return true;
                 }
+                /*
                 else
                 {
                     (new Thread()
@@ -178,6 +179,7 @@ public class WGRegionEventsListener implements Listener {
                     }).start();
                     regions.add(region);
                 }
+                */
             }
         }
         
@@ -203,6 +205,7 @@ public class WGRegionEventsListener implements Listener {
                     regions.addAll(oldRegions);
                     return true;
                 }
+                /*
                 else
                 {
                     (new Thread()
@@ -223,6 +226,7 @@ public class WGRegionEventsListener implements Listener {
                     }).start();
                     itr.remove();
                 }
+                */
             }
         }
         put(player, regions);
