@@ -37,7 +37,6 @@ public class RegionLeaveEvent extends RegionEvent  implements Cancellable {
      * when the event is cancelled the player will not be able to move out of the region
      * @param cancelled true if the player should be stopped from moving out of the region
      */
-    @Override
     public void setCancelled(boolean cancelled)
     {
         if (!this.cancellable)
@@ -52,7 +51,6 @@ public class RegionLeaveEvent extends RegionEvent  implements Cancellable {
      * retrieves whether this event will be cancelled/has been cancelled by any plugin
      * @return true if this event will be cancelled and the player will be stopped from moving
      */
-    @Override
     public boolean isCancelled()
     {
         return this.cancelled;
