@@ -115,8 +115,14 @@ public class WGRegionEventsListener implements Listener {
     {
         // Pre-check for block move
         if (from != null && to != null) {
-            if (to.getWorld().equals(from.getWorld()) && ((int)from.getX() == (int)to.getX())
-            && ((int)from.getY() == (int)to.getY()) && ((int)from.getZ() == (int)to.getZ())) {
+            if
+            (
+                to.getWorld().equals(from.getWorld())
+            &&  from.getBlockX() == to.getBlockX()
+            &&  from.getBlockY() == to.getBlockY()
+            &&  from.getBlockZ() == to.getBlockZ()
+            )
+            {
                 return false;
             }
         }
